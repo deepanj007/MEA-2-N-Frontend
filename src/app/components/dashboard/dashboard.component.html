@@ -13,7 +13,7 @@
   </form>
   <h3 class="page-header text-center">Games Arena</h3>
   <div class="row" >
-  <div class="well col-lg-12" style="background-color: rgba(167, 234, 70, 0.89);" *ngFor="let user of users | filterPipe: search | paginate: { itemsPerPage: 3, currentPage: p }">
+  <div class="well col-lg-12" style="background-color: #93c54b;" *ngFor="let user of users | filterPipe: search | paginate: { itemsPerPage: 3, currentPage: p }">
     
     <div class="row">
       <div class="col-lg-11 col-sm-8 col-xs-8">
@@ -36,6 +36,6 @@
     </div>
   </div>
   <div class="text-center">
-  <pagination-controls class="pagination" (pageChange)="p = $event" #api></pagination-controls>
+  <pagination-controls class="my-pagination" (pageChange)="p = $event" #api></pagination-controls>
   </div>
 </div>
