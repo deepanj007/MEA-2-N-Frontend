@@ -1,0 +1,6 @@
+pagination-controls deep .ng2-pagination .current {
+    background: red;
+  }
+  .ng2-pagination .current {
+    background: red;
+  }
