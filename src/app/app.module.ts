@@ -18,13 +18,15 @@ import {FlashMessagesModule} from "angular2-flash-messages";
 import {Ng2PaginationModule} from 'ng2-pagination';
 import {AuthGuard} from './guards/auth.guard';
 import {FilterPipe,OrderByPipe} from './components/dashboard/filter.pipe';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
-  {path:'profile', component: ProfileComponent, canActivate: [AuthGuard]}
+  {path:'profile', component: ProfileComponent, canActivate: [AuthGuard]},
+  {path:'**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     ProfileComponent,
     FilterPipe,
-    OrderByPipe
+    OrderByPipe,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
